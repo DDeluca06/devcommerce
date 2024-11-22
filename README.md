@@ -13,6 +13,17 @@ All listed modules also include their dependencies.
 - Dotenv (.env not included, duh)
 - MySQL2
 
+# File System
+```
+├── node_modules          # Node modules. 
+├── app.mjs               # The app, as lazily built as lazy comes.
+├── incentive.sql         # SQL statements to create the DB and tables, with example data.
+├── versions.png          # If you missed the README prerequisites (a big one at that), here's a PNG version.
+├── package-lock.json     # Packages, but locked.
+├── package.json          # Packages.
+├── LICENSE               # This is where I would put the license, if I had one.
+└── README.md             # You're reading it. Like right now.
+```
 # Reflection Questions
 1. How do primary and foreign keys help maintain data integrity?
   a. By designating primary and foreign keys inside of your tables, you are able to uniquely identify data and maintain structure within your database, thus enabling you to keep data integrity.
