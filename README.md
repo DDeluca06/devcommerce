@@ -1,5 +1,17 @@
 # devcommerce
-E-commerce developer repo.
+ECommerce MySQL database and test application.
+
+# Prerequisites
+- Node.JS v20.18.0 or later
+- NPM 10.8.2 or later
+- Reading Capability (this one's very important)
+
+# Modules Used
+All listed modules also include their dependencies.
+- Sequelize
+- Nodemon
+- Dotenv (.env not included, duh)
+- MySQL2
 
 # Reflection Questions
 1. How do primary and foreign keys help maintain data integrity?
