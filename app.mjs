@@ -1,24 +1,25 @@
+// Importing Sequelize and dotenv
 import { Sequelize, DataTypes } from 'sequelize';
 import dotenv from 'dotenv';
 
-// Load environment variables
+// Load env variables
 dotenv.config();
 
-// Create a Sequelize instance!
+// Create our Sequelize instance!
 const sequelize = new Sequelize(
     process.env.DB_NAME, // Database name
     process.env.DB_USER, // Username
     process.env.DB_PASSWORD, // Password (totally didn't have to try 40 times to get this one right)
     {
-        host: process.env.DB_HOST, // Host (localhost, lol)
+        host: process.env.DB_HOST, // Host
         port: process.env.DB_PORT, // Port
         dialect: process.env.DB_DIALECT, // Dialect (e.g., 'mysql')
         logging: false // You do NOT need all of this output, just give me my print statements and leave me alone
-                            // Future Demi here (11 PM): ^ This guy doesn't know what he's talking about, you probably should toggle this as you need it.
+                            // Future Demitri here (11 PM): ^ This guy doesn't know what he's talking about, you probably should toggle this as you need it.
     }
 );
 
-// Defining the Customer model
+// Defining/'Creating' the Customer model
 const Customer = sequelize.define('Customer', {
     customerid: {
         type: DataTypes.INTEGER,
@@ -76,7 +77,7 @@ const testConnection = async () => {
         await sequelize.authenticate();
         console.log(`We're in, Captain!`);
     } catch (error) {
-        console.error('You did SOMETHING wrong. Good luck:', error);
+        console.error('You did SOMETHING wrong. Good luck:', error); // I LOVE SARCASM!!!!!
     }
 };
 
@@ -86,7 +87,7 @@ const syncModel = async () => {
         await sequelize.sync();
         console.log(`Syncronized!`);
     } catch (error) {
-        console.error('Something went wrong! Take a cryptic, unhelpful message:', error);
+        console.error('Something went wrong! Take a cryptic, unhelpful message:', error); // I LOVE SARCASM!!!!!
     }
 };
 
