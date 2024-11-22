@@ -1,3 +1,4 @@
+-- If the DB exists, remove it, create it and use it.
 DROP DATABASE IF EXISTS incentive;
 CREATE DATABASE IF NOT EXISTS incentive;
 USE incentive;
@@ -48,7 +49,7 @@ CREATE INDEX idx_customer_id ON orders(customerid);
 CREATE INDEX idx_order_id ON order_items(order_id);
 CREATE INDEX idx_product_id ON order_items(product_id);
 
-
+# INSERTING DATA
 -- Insert data into customers table
 INSERT INTO customers (regdate, first_name, last_name, email, phone, address, city, state, zip)
 VALUES
@@ -91,6 +92,7 @@ VALUES
 (5, 5, 2, 149.99);
 # INSERT COMPLETE
 
+# SELECT AND JOINS
 -- Get order details with customer info. Joining Customer & Orders.
 SELECT 
     customers.customerid,
